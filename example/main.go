@@ -1,11 +1,3 @@
-# goflatten
-Flatten golang nested structs
-
-# Example
-
-go run example/main.go
-
-```
 package main
 
 import (
@@ -112,31 +104,3 @@ func ObjectToJSON(v interface{}, isIndent bool) {
 
 	fmt.Printf("%s\n", string(byteArr))
 }
-```
-
-Output:
-
-```
-{
-    "Person.HomeArr[0].City": "Vancouver0",
-    "Person.HomeArr[0].RoomArr[0].Name": "Living room",
-    "Person.HomeArr[0].RoomArr[0].Size": 500,
-    "Person.HomeArr[0].RoomArr[1].Name": "Master room",
-    "Person.HomeArr[0].RoomArr[1].Size": 600,
-    "Person.HomeArr[0].YearBuilt": 1999,
-    "Person.HomeArr[1].City": "Vancouver1",
-    "Person.HomeArr[1].YearBuilt": 2000,
-    "Person.ID": 999,
-    "Person.Name": "Jun",
-    "Person.PermissionArr[0]": "VIEW",
-    "Person.PermissionArr[1]": "EDIT",
-    "Person.Table[0][0].Name": "Row 0 Col 0",
-    "Person.Table[0][0].Width": 10,
-    "Person.Table[0][1].Name": "Row 0 Col 1",
-    "Person.Table[0][1].Width": 11,
-    "Person.Table[1][0].Name": "Row 1 Col 0",
-    "Person.Table[1][0].Width": 20,
-    "Person.Table[1][1].Name": "Row 1 Col 1",
-    "Person.Table[1][1].Width": 21
-}
-```
